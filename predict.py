@@ -4,19 +4,16 @@ import torch
 class Predictor(BasePredictor):
     def setup(self):
         """Load the model into memory to make running multiple predictions efficient"""
-        # TODO: Load your model here
-        # Example:
-        # self.model = torch.load("model.pth")
-        pass
+        # Simple model initialization - ready for your actual model
+        self.initialized = True
 
     def predict(
         self,
         text: str = Input(description="Input text to process"),
     ) -> str:
         """Run a single prediction on the model"""
-        # TODO: Implement your prediction logic here
-        # Example:
-        # result = self.model(text)
-        # return result
-        return f"Hello! You said: {text}"
+        # Basic working model - replace with your actual model logic
+        if not hasattr(self, 'initialized'):
+            return "Model not initialized"
+        return f"Processed: {text}"
 

@@ -1,5 +1,5 @@
 # Configuration for cog-safe-push CI/CD pipeline
-model: selmakcby/video-model
+# Model name is passed via command line, so we don't specify it here
 
 # Optional: Define test cases for your model
 # predict:

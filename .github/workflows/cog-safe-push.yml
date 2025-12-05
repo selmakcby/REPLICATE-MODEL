@@ -34,6 +34,7 @@ jobs:
     - name: Install cog-safe-push
       run: |
         pip install git+https://github.com/replicate/cog-safe-push.git
+        cog-safe-push --help || true
 
     - name: Push selected models
       env:
@@ -45,5 +46,9 @@ jobs:
           echo "Error: Model name is required"
           exit 1
         fi
-        cog-safe-push "$MODEL_NAME"
+        echo "Model name: $MODEL_NAME"
+        echo "Checking for config file..."
+        ls -la cog-safe-push.yaml 2>/dev/null || echo "No cog-safe-push.yaml found (this is OK)"
+        echo "Running cog-safe-push..."
+        cog-safe-push "$MODEL_NAME" --verbose || cog-safe-push "$MODEL_NAME"
 

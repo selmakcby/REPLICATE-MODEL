@@ -9,7 +9,7 @@ build:
     - "torch==2.1.0"
     - "torchvision==0.16.0"
   system_packages:
-    - "libgl1-mesa-glx"
+    - "libgl1"
     - "libglib2.0-0"
 
 # Predict function arguments

@@ -6,6 +6,8 @@ on:
       model:
         description: 'The name of the model to push, in the format owner/model-name'
         type: string
+        required: true
+        default: 'selmakcby/video-model'
 
 jobs:
   cog-safe-push:
@@ -38,5 +40,10 @@ jobs:
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
       run: |
-        cog-safe-push ${{ inputs.model }}
+        MODEL_NAME="${{ inputs.model }}"
+        if [ -z "$MODEL_NAME" ]; then
+          echo "Error: Model name is required"
+          exit 1
+        fi
+        cog-safe-push "$MODEL_NAME"
 

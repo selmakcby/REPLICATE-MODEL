@@ -1,11 +1,4 @@
 # Configuration for cog-safe-push CI/CD pipeline
-# Model name is passed via command line, so we don't specify it here
-
-# Optional: Define test cases for your model
-# predict:
-#   compare_outputs: false
-#   predict_timeout: 700
-#   test_cases:
-#     - inputs:
-#         text: "Hello world"
+# Model name is passed via command line argument
+predict: {}
 

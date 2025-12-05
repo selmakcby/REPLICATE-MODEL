@@ -1,3 +1,11 @@
 # Configuration for cog-safe-push CI/CD pipeline
 model: selmakcby/video-model
 
+# Optional: Define test cases for your model
+# predict:
+#   compare_outputs: false
+#   predict_timeout: 700
+#   test_cases:
+#     - inputs:
+#         text: "Hello world"
+

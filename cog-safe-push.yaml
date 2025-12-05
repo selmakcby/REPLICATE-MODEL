@@ -1,0 +1,23 @@
+# Configuration for cog-safe-push CI/CD pipeline
+# This file is optional - cog-safe-push will work with defaults if omitted
+# See: https://github.com/replicate/cog-safe-push/blob/main/README.md
+
+# This is the model that the deployment will use
+# model: selmakcby/video-model
+
+# A private model to run the test against before pushing
+# test_model: selmakcby/video-model-test
+
+# Hardware to use for testing (optional)
+# test_hardware: gpu-l40s
+
+# Define the predict section to run predictions against the test model
+# predict:
+#   compare_outputs: false
+#   predict_timeout: 700
+#   test_cases:
+#     - inputs:
+#         text: "Hello world"
+#     - inputs:
+#         text: "Test input"
+

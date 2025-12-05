@@ -1,0 +1,5 @@
+# Add your Python dependencies here
+# Example:
+# numpy==1.24.0
+# transformers==4.30.0
+

@@ -1,4 +1,0 @@
-# Configuration for cog-safe-push CI/CD pipeline
-# Model name is passed via command line argument
-predict: {}
-
